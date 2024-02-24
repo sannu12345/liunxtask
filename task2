@@ -1,9 +1,15 @@
-mv commmand 
-kldklfjsl
-klsjklf
-skfl;jfls;k
+vboxuser@lab2 :~ $ touch demo. txt
+vboxuser@lab2 :~ $ ls
+demo.txt Documents
+Desktop
+vboxuser@lab2 :~ $
+vboxuser@lab2 :~ $
+vboxuser@lab2 :~ $ ls -li
+929406 -rw-rw-r -- 1 vboxuser vboxuser --  check the default permission before change
 
-kljfls
-ks
-fk
-s
+after the permission change
+vboxuser@lab2 :~ $ chmod 467 demo. txt
+vboxuser@lab2 :~ $ ls -li
+total 36
+929406 -r -- rw-rwx 1 vboxuser vboxuser 0 Feb 24 22:37 demo.txt
+
