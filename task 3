@@ -1,0 +1,49 @@
+
+> ^C[centos@ip-10-220-135-129 ~]$ nslookup guvi.in
+Server:         10.220.128.2
+Address:        10.220.128.2#53
+
+Non-authoritative answer:
+Name:   guvi.in
+Address: 104.26.5.88
+Name:   guvi.in
+Address: 172.67.70.207
+Name:   guvi.in
+Address: 104.26.4.88
+Name:   guvi.in
+Address: 2606:4700:20::681a:458
+Name:   guvi.in
+Address: 2606:4700:20::681a:558
+Name:   guvi.in
+Address: 2606:4700:20::ac43:46cf
+
+top command find cpu and mem usage
+[centos@ip-10-220-135-129 ~]$ top
+top - 13:23:44 up 767 days, 22:42,  1 user,  load average: 0.09, 0.08, 0.05
+Tasks: 151 total,   1 running, 149 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  0.4 us,  0.3 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 15963140 total,   629284 free, 10494196 used,  4839660 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.  4278716 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+11504 root      20   0  926932  13776   9624 S   0.7  0.1   0:42.42 TaniumCX
+    1 root      20   0  193856   5560   2844 S   0.3  0.0  24:10.24 systemd
+ 9230 root      20   0   56596  26856   6476 S   0.3  0.2   1:23.20 pybin
+11381 root      20   0 2635828  32052   8952 S   0.3  0.2   1:28.13 TaniumCX
+16407 centos    20   0  162132   2300   1576 R   0.3  0.0   0:00.09 top
+24043 centos    20   0 2924452 486352  16820 S   0.3  3.0   6:12.58 scihttpd
+26935 centos    20   0  157108   2832   1256 S   0.3  0.0   0:00.64 sshd
+26939 centos    20   0  113420   1668   1332 S   0.3  0.0   0:01.57 bash
+
+
+ping guvi.com
+
+
+ netstat -t
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 ip-10-220-135-129:55494 194.34.82.250:9480      ESTABLISHED
+tcp        1      0 localhost:48780         localhost:9946          CLOSE_WAIT
+tcp        0      0 localhost:57582         localhost:17473         TIME_WAIT
+tcp        0      0 ip-10-220-135-129:55592 194.34.82.250:9480      TIME_WAIT
+tcp        0      0 ip-10-220-135-129:55600 194.34.82.250:9480      TIME_WA
